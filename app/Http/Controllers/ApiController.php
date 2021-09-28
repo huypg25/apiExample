@@ -27,8 +27,10 @@ class ApiController extends Controller
 
     public function getPost(Post $post) {
         if ($post->exists()) {
+            
             return response($post, 200);
         } else {
+            
             return response()->json([
                 "message" => "Post not found"
             ], 404);
@@ -45,6 +47,7 @@ class ApiController extends Controller
                 "message" => "records updated successfully"
             ], 200);
         } else {
+            
             return response()->json([
                 "message" => "Post not found"
             ], 404);
@@ -60,6 +63,7 @@ class ApiController extends Controller
                 "message" => "records deleted"
             ], 202);
         } else {
+            
             return response()->json([
                 "message" => "Post not found"
             ], 404);
