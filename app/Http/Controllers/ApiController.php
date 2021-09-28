@@ -6,10 +6,11 @@ use App\Post;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
-{
+{https://github.com/huypg25/apiExample/blob/main/app/Http/Controllers/ApiController.php
     public function getAllPosts() {
 
             $posts = Post::get()->toJson(JSON_PRETTY_PRINT);
+        
             return response($posts, 200);
     }
 
